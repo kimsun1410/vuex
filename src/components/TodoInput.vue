@@ -2,7 +2,7 @@
   <div class="inputbox shadow">
       <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">
       <span class="addContainer" v-on:click="addTodo">
-          <i class="fa fa-plus addBtn" aria-hidden="true"></i>
+          <i class="fa fa-plus addBtn"></i>
       </span>
 
       <Modal v-if="showModal" @close="showModal = false">
@@ -30,7 +30,8 @@ export default {
             // 저장하는 로직
             // localstorage item
             if(this.newTodoItem !== '') {
-                this.$emit('addTodoItem', this.newTodoItem);
+                // this.$emit('addTodoItem', this.newTodoItem);
+                this.$store.commit('addOneItem', this.newTodoItem);
                 this.clearInput();
             }else{
                 this.showModal = !this.showModal;
