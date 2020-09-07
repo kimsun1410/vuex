@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # vue-todo
 
 > A Vue.js project
@@ -20,4 +19,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 =======
 # Vue-todo
 todolist
->>>>>>> 30e8304ccdb62b2ed0060d038fb5f45fc2261eba
+
